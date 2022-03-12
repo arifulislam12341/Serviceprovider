@@ -27,9 +27,11 @@ Route::post('/serviceproviderlogin',[ServiceproviderController::class, 'servicep
 Route::get('/serviceDash', [ServiceproviderController::class, 'serviceDash'])->name('serviceDash');
 
 Route::get('/serviceproviderInfo', [ServiceproviderController::class, 'serviceproviderInfo'])->name('serviceproviderInfo');
-
+//update
 Route::get('/serviceproviderUpdate', [ServiceproviderController::class, 'serviceproviderUpdate'])->name('serviceproviderUpdate');
 Route::post('/serviceproviderUpdate', [ServiceproviderController::class, 'serviceproviderUpdateSubmit'])->name('serviceproviderUpdate');
+//delete
+Route::get('/serviceproviderDelete', [ServiceproviderController::class, 'serviceproviderDelete'])->name('serviceproviderDelete');
 
 Route::get('/serviceproviderLogout', [ServiceproviderController::class, 'serviceproviderLogout'])->name('serviceproviderLogout');
 

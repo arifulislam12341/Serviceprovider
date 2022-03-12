@@ -20,25 +20,25 @@
 <center>
 <form action="{{route('serviceproviderRegistration')}}" class="form-group" method="post">
 {{csrf_field()}}
-    <label class="text-white" for=""> Name</label>
+    <label class="text-white text-uppercase fw-bold" for="">Name</label>
     <input type="text" class="form-control" name="name" value="{{old('name')}}">
     @error('name')
     <span>{{$message}}</span>
     @enderror
     <br>
-    <label for="">Email</label>
+    <label class="text-white text-uppercase fw-bold" for="">Email</label>
     <input type="text" class="form-control" name="email" value="{{old('email')}}">
     @error('email')
     <span>{{$message}}</span>
     @enderror
     <br>
-    <label for="">Password</label>
+    <label class="text-white text-uppercase fw-bold" for="">Password</label>
     <input type="password" class="form-control" name="password" value="{{old('password')}}">
     @error('password')
     <span>{{$message}}</span>
     @enderror
     <br>
-    <label for="">PhoneNumber</label>
+    <label class="text-white text-uppercase fw-bold" for="">PhoneNumber</label>
     <input type="text" class="form-control" name="phonenu" value="{{old('phoneno')}}">
     @error('phonenu')
     <span>{{$message}}</span>
@@ -56,7 +56,7 @@
     <span>{{$message}}</span>
     @enderror
     <br> -->
-    <label for="validationDefault04" class="form-label">Service Type</label>
+    <label class="text-white text-uppercase fw-bold" for="validationDefault04" class="form-label">Service Type</label>
     <select class="form-select" id="validationDefault04" required>
       <option selected disabled value="">Choose...</option>
       <option value="1">Home Cleaning</option>
@@ -73,12 +73,14 @@
 
     </select> -->
 
-    <label for="">Office Address</label>
+    <label class="text-white text-uppercase fw-bold" for="">Office Address</label>
     <input type="text" class="form-control" name="address" value="{{old('address')}}">
     @error('address')
     <span>{{$message}}</span>
     @enderror
-    <input type="submit">
+    <br>
+    <button class="btn btn-secondary btn-lg" type="submit">Submit</button>
+    <!-- <input type="submit" class="btn btn-secondary btn-lg">Submit</input> -->
 </div>
 </div>
 

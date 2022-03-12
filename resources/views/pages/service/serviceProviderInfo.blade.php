@@ -8,37 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Provider Info</title>
 </head>
-<body>
+<body style="background-image: url('images/serviceprovider.jpeg')">
+<br>
+
   
-<h1 class="text-center">Your Profile Details</h1>
-    <div class=" col-lg-4 mx-auto" style="background-color:rgb(240,160,75)">
-    <table class="table table-border">
+<h1 class="text-center text-white">Service Provider Profile Details</h1>
+
+<br>
+<br>
+    <table class="table table-hover">
+ 
+    <tr class="table-dark  " >
+
+<th>User id:</th>
+<th>Name:</th>
+<th>Email:</th>
+<th>Password:</th>
+<th>Phone:</th>
+<th>Servicetype:</th>
+
+<th>Address:</th>
+</tr>
+
+
         
         @foreach($details as $detail)
-        <tr>
-            <td><b>User id:</b>{{$detail->id}}</td>
-        </tr>
-        <tr>
-            <td><b>Name:</b>{{$detail->name}}</td>
-        </tr>
-        <tr>
-            <td><b>Email:</b>{{$detail->email}}</td>
-        </tr>
-        <tr>
-            <td><b>Password:</b>{{$detail->password}}</td>
-        </tr>
-        <tr>
-            <td><b>Phone:</b>{{$detail->phoneno}}</td>
-</tr>
-        <tr>
-            <td><b>Servicetype:</b>{{$detail->servicetype}}</td>
-        <tr>
-            <td><b>Address:</b>{{$detail->address}}</td>
+        <tr class=" table-success ">
+            <td>{{$detail->id}}</td>
+      
+            <td>{{$detail->name}}</td>
+      
+            <td>{{$detail->email}}</td>
+       
+            <td>{{$detail->password}}</td>
+     
+            <td>{{$detail->phoneno}}</td>
+
+            <td>{{$detail->servicetype}}</td>
+    
+            <td>{{$detail->address}}</td>
         </tr>
         @endforeach
 
-    </table>
-    </div>
+        </table>
+
 
 </body>
 </html>

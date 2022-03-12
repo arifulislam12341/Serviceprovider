@@ -172,7 +172,7 @@ public function serviceproviderInfo(){
    
     $id=Session::get("serviceId");
     $t =Serviceprovider::where('id',$id)->first();
-    
+
     return $t->serviceProviderDetail();
    
     
@@ -200,6 +200,25 @@ public function serviceproviderUpdate(){
      return view ("pages.service.providerDash");
  
  }
+ public function serviceproviderDelete(Request $request){
+    $id=Session::get("serviceId");
+    $service =Serviceprovider ::where('id', $id)->delete();
+    
+
+
+//     $service->name =$request->name;
+//     $service->email=$request->email;
+//     $service->password=$request->password;
+//     $service->phoneno =$request->phonenu;
+//     $service->servicetype =$request->servicetype;
+//     $service->address=$request->address;
+
+//   $service->delete();
+     session()->forget('serviceId');
+
+  return view ("pages.service.providerRegistration");
+
+}
 
 
 

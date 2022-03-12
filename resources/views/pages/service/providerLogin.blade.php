@@ -9,6 +9,9 @@
     <title>ServiceProvider Login</title>
 </head>
 <body>
+<center>
+    
+<div class=" col-lg-4  ">
 <form action="{{route('serviceproviderlogin')}}" class="form-group" method="post">
 {{csrf_field()}}
     
@@ -25,7 +28,10 @@
     <span>{{$message}}</span>
     @enderror
     <br>
+
     <input type="submit">
+</div>
+</center>
 </form>
 </body>
 </html>
