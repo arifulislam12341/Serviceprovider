@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\controllers\Serviceprovidercontroller;
+use App\http\controllers\Orderdetailscontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +32,6 @@ Route::get('/serviceproviderUpdate', [ServiceproviderController::class, 'service
 Route::post('/serviceproviderUpdate', [ServiceproviderController::class, 'serviceproviderUpdateSubmit'])->name('serviceproviderUpdate');
 
 Route::get('/serviceproviderLogout', [ServiceproviderController::class, 'serviceproviderLogout'])->name('serviceproviderLogout');
+
+//orderdetails
+Route::get('/seeorderDetails', [OrderdetailsController::class, 'seeorderDetails'])->name('seeorderDetails');
