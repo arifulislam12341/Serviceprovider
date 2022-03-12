@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
 use App\Models\orderdetails;
 use App\Http\Requests\StoreorderdetailsRequest;
 use App\Http\Requests\UpdateorderdetailsRequest;
@@ -92,5 +92,21 @@ class OrderdetailsController extends Controller
      return view("pages.customerOrder.orderDetails")->with('details', $details);
        
         
+    }
+    public function statusChange(Request $request){
+        $service =orderdetails ::where('order_id', $request->order_id)->first();
+        // return $service;
+        $service->status ="Done";
+        
+     $service->save();
+        return view("pages.service.providerDash");
+    }
+    public function orderCancel(Request $request){
+        $service =orderdetails ::where('order_id', $request->order_id)->first();
+        // return $service;
+        $service->status ="Cancel by service provider";
+        
+     $service->save();
+        return view("pages.service.providerDash");
     }
 }

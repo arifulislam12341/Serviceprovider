@@ -35,3 +35,5 @@ Route::get('/serviceproviderLogout', [ServiceproviderController::class, 'service
 
 //orderdetails
 Route::get('/seeorderDetails', [OrderdetailsController::class, 'seeorderDetails'])->name('seeorderDetails');
+Route::get('/statusChange/{order_id}',[OrderdetailsController::class,'statusChange'])->name('statusChange');
+Route::get('/orderCancel/{order_id}',[OrderdetailsController::class,'orderCancel'])->name('orderCancel');

@@ -101,7 +101,7 @@ class ServiceproviderController extends Controller
             'email'=>'required',
             'password'=>'required',
             'phonenu'=>'required',
-            'servicetype'=>'required',
+            // 'servicetype'=>'required',
             'address'=>'required',
     
         ],
@@ -110,6 +110,7 @@ class ServiceproviderController extends Controller
             'password.required'=>'Please Enter Your password',
             'phonenu.required'=>'Please Enter Your Phone Number',
             'email.required'=>'Please Enter Your Email',
+            // 'servicetype.required'=>'Please Select Your Service Type',
         ]
         );
         $service=new Serviceprovider();

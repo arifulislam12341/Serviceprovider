@@ -17,6 +17,7 @@
         
         <a class="nav-link " href="{{route('seeorderDetails')}}"><b>Orderdetails</b></a>
         <a class="nav-link " href="{{route('serviceproviderLogout')}}"><b>Logout</b></a>
+      
       </div>
     </div>
   </div>

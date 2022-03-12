@@ -31,7 +31,9 @@
             <td>{{$detail->customer_address}}</td>
             <td>{{$detail->status}}</td>
 
-            <td><a class="btn btn-primary px-3"  href="">Order Done</a></td>
+            <td><a class="btn btn-primary px-3"  href="/statusChange/{{$detail->order_id}}">Order Done</a></td>
+            
+            <td><a class="btn btn-danger px-3"  href="/orderCancel/{{$detail->order_id}}">Cancel Order</a></td>
         </tr>
 
         @endforeach

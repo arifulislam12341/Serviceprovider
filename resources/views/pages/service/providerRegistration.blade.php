@@ -9,10 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Provider Registration</title>
 </head>
-<body>
+<body style="background-image: url('images/registration.jpg')">
+    <div class="container">
+    <!-- <div class="row  justify-content-center align-items-center">
+                <div class="col-lg-6 col-sm-6 ">
+                    <img class="img-fluid" src="{{URL('images/registration.jpg')}}" alt="">
+                </div> -->
+   <center>
+                <div class=" col-lg-4  ">
+<center>
 <form action="{{route('serviceproviderRegistration')}}" class="form-group" method="post">
 {{csrf_field()}}
-    <label for=""> Name</label>
+    <label class="text-white" for=""> Name</label>
     <input type="text" class="form-control" name="name" value="{{old('name')}}">
     @error('name')
     <span>{{$message}}</span>
@@ -36,19 +44,47 @@
     <span>{{$message}}</span>
     @enderror
     <br>
-    <label for="">Service Type</label>
-    <input type="text" class="form-control" name="servicetype" value="{{old('servicetype')}}">
+    <!-- <label for="validationDefault04"  class="form-label">Service Type</label>
+    <select type="text" class="form-control" name="servicetype" value="{{old('servicetype')}}" id="validationDefault04"     >
+  
+    <option selected>Select a service type</option>
+  <option value="1">Home Cleaning</option>
+  <option value="2">AC Reparing</option>
+  <option value="3">AC Cleaning</option>
+    </select>
     @error('servicetype')
     <span>{{$message}}</span>
     @enderror
+    <br> -->
+    <label for="validationDefault04" class="form-label">Service Type</label>
+    <select class="form-select" id="validationDefault04" required>
+      <option selected disabled value="">Choose...</option>
+      <option value="1">Home Cleaning</option>
+  <option value="2">AC Reparing</option>
+  <option value="3">AC Cleaning</option>
+    </select>
     <br>
+
+    <!-- <label for="validationDefault04" class="form-label">Status</label>
+    <select class="form-select" id="validationDefault04" required>
+      <option selected disabled value="">Choose...</option>
+      <option value="1">Active</option>
+      <option value="1">Deactive</option>
+
+    </select> -->
+
     <label for="">Office Address</label>
     <input type="text" class="form-control" name="address" value="{{old('address')}}">
     @error('address')
     <span>{{$message}}</span>
     @enderror
     <input type="submit">
+</div>
+</div>
+
 </form>
+</center>
+</center>
 </body>
 </html>
 @endsection
