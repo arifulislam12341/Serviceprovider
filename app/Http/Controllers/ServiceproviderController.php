@@ -6,6 +6,10 @@ use App\Models\Serviceprovider;
 use App\Http\Requests\StoreServiceproviderRequest;
 use App\Http\Requests\UpdateServiceproviderRequest;
 use Session;
+
+use Illuminate\Support\Facades\Cookie;
+
+
 class ServiceproviderController extends Controller
 {
     /**
@@ -157,7 +161,14 @@ public function serviceproviderloginSubmit(Request $request)
 
         if ($service){
             $request->session()->put("serviceId",$service->id); 
-            return redirect()->route("serviceDash");
+            if ($request->remember) {
+                setcookie('remember',$request->email, time()+36000);
+                Cookie::queue('name',$service->email."welcome to login",time()+60);
+            }else{
+                setcookie('remember',"");
+                Cookie::queue('name',"");
+            }
+            return redirect()->route("serviceproviderInfo");
             
         }
 

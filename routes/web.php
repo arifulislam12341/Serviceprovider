@@ -26,7 +26,7 @@ Route::get('/serviceproviderlogin',[ServiceproviderController::class, 'servicepr
 Route::post('/serviceproviderlogin',[ServiceproviderController::class, 'serviceproviderloginSubmit'])->name('serviceproviderlogin');
 Route::get('/serviceDash', [ServiceproviderController::class, 'serviceDash'])->name('serviceDash');
 
-Route::get('/serviceproviderInfo', [ServiceproviderController::class, 'serviceproviderInfo'])->name('serviceproviderInfo');
+Route::get('/serviceproviderInfo', [ServiceproviderController::class, 'serviceproviderInfo'])->name('serviceproviderInfo')->middleware('Validprovider');
 //update
 Route::get('/serviceproviderUpdate', [ServiceproviderController::class, 'serviceproviderUpdate'])->name('serviceproviderUpdate');
 Route::post('/serviceproviderUpdate', [ServiceproviderController::class, 'serviceproviderUpdateSubmit'])->name('serviceproviderUpdate');

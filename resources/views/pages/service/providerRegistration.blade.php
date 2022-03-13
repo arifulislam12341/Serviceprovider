@@ -79,7 +79,7 @@
     <span>{{$message}}</span>
     @enderror
     <br>
-    <button class="btn btn-secondary btn-lg" type="submit">Submit</button>
+    <button class="btn btn-outline-secondary text-uppercase fst-italic fw-bold btn-lg" type="submit">Submit</button>
     <!-- <input type="submit" class="btn btn-secondary btn-lg">Submit</input> -->
 </div>
 </div>

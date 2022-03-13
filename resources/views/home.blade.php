@@ -21,33 +21,33 @@
                 <div class="carousel-item active">
                     <img src="{{URL('images/c1.jpg')}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 class="" style="color:black">Welcome Home Utility Service</h1>
+                            <h1 class="" style="color:white">Welcome Home Utility Service</h1>
                             <p style="color:black">We are available 24hr</p>
                         </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{URL('images/c2.jpg')}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 style="color:black">We offer the best service</h1>
-                            <p style="color:black">So you can trust us</p>
+                            <h1 style="color:white">We offer the best service</h1>
+                            <p style="color:white">So you can trust us</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{URL('images/c3.jpg')}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 style="color:black">Recomended by many users</h1>
-                            <p style="color:black">Signup now</p>
+                            <h1 style="color:white">Recomended by many users</h1>
+                            <p style="color:white">Signup now</p>
                         </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <!-- <button class="carousel-control-white" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> -->
         </div>
     </header>
 
@@ -209,7 +209,7 @@
         </section>
 
          <!-- frequently question part -->
-         <section class="container mt-5 mx-auto bg-danger">
+         <section class="container mt-5 mx-auto bg-success">
             <div>
                 <h1 class="text-center">Frequently Asked Questions</h1>
             </div>
@@ -262,8 +262,8 @@
 
      <!-- footer started -->
 
-     <footer class="text-center d-flex justify-content-center align-items-center  mt-5 row bg-primary container-fluid mx-auto">
-            <p class="pt-3 col-lg-6"><b>©2022. All Right Reserved By Noor Mohammad </b></p>
+     <footer class="text-center d-flex text-white justify-content-center align-items-center  mt-5 row bg-dark container-fluid mx-auto">
+            <p class="pt-3 col-lg-6"><b>©2022. All Right Reserved By Ariful Islam </b></p>
                 <div class="col-lg-6">
                     <h4>Get the App</h4>
                         <a class="" href="https://play.google.com/store/apps/details?id=com.spotify.music">
