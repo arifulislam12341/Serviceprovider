@@ -13,7 +13,7 @@
     <br>
     <br>
     <br>
-<div style="background-color:rgba(0,0,0,0.8);" class=" col-lg-3 ">
+<div style="background-color:rgba(0,0,0,0.5);" class=" col-lg-3 p-3 shadow-lg ">
 <form action="{{route('serviceproviderlogin')}}" class="form-group" method="post">
 {{csrf_field()}}
     
@@ -30,16 +30,19 @@
 						} ?>">
     
     @error('email')
-    <span>{{$message}}</span>
+    <span class="text-white">{{$message}}</span>
     @enderror
     
-    <span><br>
+    <span  class="text-white">
 						{{Cookie::get('name')}}
 				</span>
+                <br>
+                    <!-- </div>
+                    <div style="background-color:rgba(0,0,0,0.5);" class=" col-lg-3 "> -->
     <label  class="text-white fs-5 text-uppercase fst-italic fw-bold" for="">Password</label>
     <input type="password" class="form-control" name="password" value="{{old('password')}}">
     @error('password')
-    <span>{{$message}}</span>
+    <span class="text-white">{{$message}}</span>
     @enderror
     <div class="form-group d-md-flex">
 				<div class="w-50">
@@ -52,9 +55,10 @@
 								
 							</div>
 			</div>
-    <button  class="btn btn-outline-secondary  text-white btn-lg" type="submit"><b>LOGIN<b></button>
+ 
    
 </div>
+<button  class="btn btn-outline-success text-white btn-lg" type="submit"><b>LOGIN<b></button>
 </center>
 </form>
 </body>

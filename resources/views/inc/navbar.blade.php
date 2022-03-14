@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
 <div class="d-flex justify-content-evenly">
 <nav  class="navbar navbar-expand-lg navbar-light bg-success">
   <div class="container-fluid">
@@ -13,7 +13,7 @@
      
         <a class="nav-link btn btn-outline-dark text-white text-uppercase fw-bold fst-italic" href="{{route('serviceproviderRegistration')}}"><b>Registration</b></a>
         <a class="nav-link btn btn-outline-dark text-white text-uppercase fw-bold fst-italic" href="{{route('serviceproviderlogin')}}"><b>LogIn</b></a>
-       
+        @if (Session::get("serviceId"))
         <a class="nav-link btn btn-outline-dark text-white text-uppercase fw-bold fst-italic " href="{{route('serviceproviderInfo')}}"><b>Information</b></a>
           
         <a class="nav-link btn btn-outline-dark text-white text-uppercase fw-bold fst-italic " href="{{route('serviceproviderUpdate')}}"><b>Update</b></a>
@@ -22,7 +22,7 @@
         
         <a class="nav-link btn btn-outline-dark text-white text-uppercase fw-bold fst-italic " href="{{route('seeorderDetails')}}"><b>Orderdetails</b></a>
         <a class="nav-link btn btn-outline-danger text-white text-uppercase fw-bold fst-italic" href="{{route('serviceproviderLogout')}}"><b>Logout</b></a>
-
+        @endif
       </div>
     </div>
   </div>

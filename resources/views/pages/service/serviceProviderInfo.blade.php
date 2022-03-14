@@ -20,14 +20,14 @@
  
     <tr class="table-dark  " >
 
-<th>User id:</th>
-<th>Name:</th>
-<th>Email:</th>
-<th>Password:</th>
-<th>Phone:</th>
-<th>Servicetype:</th>
+<th class="text-white text-uppercase fw-bold">User id</th>
+<th class="text-white text-uppercase fw-bold">Name</th>
+<th class="text-white text-uppercase fw-bold">Email</th>
+<th class="text-white text-uppercase fw-bold">Password</th>
+<th class="text-white text-uppercase fw-bold">Phone</th>
+<th class="text-white text-uppercase fw-bold">Servicetype</th>
 
-<th>Address:</th>
+<th class="text-white text-uppercase fw-bold">Address</th>
 </tr>
 
 

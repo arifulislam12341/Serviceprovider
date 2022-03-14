@@ -99,7 +99,7 @@ class OrderdetailsController extends Controller
         $service->status ="Done";
         
      $service->save();
-        return view("pages.service.providerDash");
+     return redirect()->route("seeorderDetails");
     }
     public function orderCancel(Request $request){
         $service =orderdetails ::where('order_id', $request->order_id)->first();
@@ -107,6 +107,6 @@ class OrderdetailsController extends Controller
         $service->status ="Cancel by service provider";
         
      $service->save();
-        return view("pages.service.providerDash");
+     return redirect()->route("seeorderDetails");
     }
 }

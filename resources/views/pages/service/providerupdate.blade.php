@@ -39,7 +39,7 @@
         </div>
 
     @endif
-   <div  class="row">
+   <div style="background-color:rgba(0,0,0,0.5);" class="row p-3">
    <div class="col-lg-6">
     <label class="text-white text-uppercase fw-bold" for="">ID</label>
 

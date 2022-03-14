@@ -101,20 +101,23 @@ class ServiceproviderController extends Controller
     {
         $validate=$request->validate(
         [
-            'name'=>'required',
+            'name'=>'required|min:3|max:100',
             'email'=>'required',
             'password'=>'required',
-            'phonenu'=>'required',
-            // 'servicetype'=>'required',
+            'phonenu'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/',
+              'servicetype'=>'required',
             'address'=>'required',
     
         ],
         [
             'name.required'=>'Please Enter Your Name',
+            'name.min'=>'Name must be greater than 3 charcters',
+            'name.max'=>'Name must be less than 100 charcters',
             'password.required'=>'Please Enter Your password',
             'phonenu.required'=>'Please Enter Your Phone Number',
             'email.required'=>'Please Enter Your Email',
-            // 'servicetype.required'=>'Please Select Your Service Type',
+            'servicetype.required'=>'Please Enter Your service type',
+            'address.required'=>'Please Enter Your address',
         ]
         );
         $service=new Serviceprovider();
@@ -129,7 +132,7 @@ class ServiceproviderController extends Controller
         
  
         $service->save();
-        return redirect()->route('serviceproviderRegistration');
+        return redirect()->route('serviceproviderlogin');
     }
     public function serviceproviderlogin(){
 
@@ -163,7 +166,7 @@ public function serviceproviderloginSubmit(Request $request)
             $request->session()->put("serviceId",$service->id); 
             if ($request->remember) {
                 setcookie('remember',$request->email, time()+36000);
-                Cookie::queue('name',$service->email."welcome to login",time()+60);
+                Cookie::queue('name',$service->email,time()+60);
             }else{
                 setcookie('remember',"");
                 Cookie::queue('name',"");
@@ -208,7 +211,7 @@ public function serviceproviderUpdate(){
        $service->address=$request->address;
  
      $service->save();
-     return view ("pages.service.providerDash");
+     return redirect()->route("serviceproviderInfo");
  
  }
  public function serviceproviderDelete(Request $request){
